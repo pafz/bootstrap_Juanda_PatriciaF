@@ -3,19 +3,19 @@ const email = document.getElementById("email");
 const password1 = document.getElementById("password1");
 const password2 = document.getElementById("password2");
 const btn = document.getElementById("btn");
-const alertasDiv = document.querySelector(".alertas")
+const alertasDiv = document.querySelector(".alertas");
+const pMal = document.getElementById("pMal");
+const pEmail = document.getElementById("emailMal");
+const pPassword = document.getElementById("passwordMal");
+
 /* CREAR FUNCION QUE QUITE EL MENSAJE DE ALERTA */
 
 /* QUÉ VAMOS A HACER
 
-CREAR UNA FUNCIÓN QUE SI NO SE CUMPLE LA VALIDACIÓN AÑADA UN ALERT EN UN DIV CREADO EN EL HTML
-Y QUE VAYA SUMANDO LAS ALERTAS EN FUNCIÓN DE LOS ERRORES QUE HAYA
-
-EN LA FUNCION, TIENE QUE DESAPARECER LA ALERTA A LOS 3 SEGUNDOS
-
-PASOS
-1-
-
+CORREGIR VALIDACIONES
+PONER EL TIMEOUT FUERA DEL IF
+CORREGIR LAS EXPRESIONES REGULARES
+DEJAR SOLO UN P DONDE ESTÉN LAS ALERTAS
 */
 
 const enviarForm = (e) => {
@@ -30,64 +30,54 @@ const enviarForm = (e) => {
     email: emailValor,
     password1: password1Valor,
   };
+  function validaciones() {
+    const expEmail = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    const expPassword = /^[a-zA-Z]\w{3,14}$/;
+    /* VALIDACION 1. TODOS LOS CAMPOS DEBEN DE ESTAR RELLENADOS */
+    if (
+      nombreValor === "" ||
+      password1Valor == "" ||
+      password2Valor == "" ||
+      emailValor == ""
+    ) {
+      pMal.innerHTML = "Rellena todos los campos";
+      pMal.style.display = "block";
+      /* VALIDACION 2. EL EMAIL DEBE DE CUMPLIR LA EXPRESIÓN REGULAR */ /!----NO ESTÁ FUNCIONANDO------/;
+    } else if (expEmail.test(emailValor)) {
+      pMal.innerHTML = "Tienes mal el email";
+      pMal.style.display = "block";
+    } else if (
+      /* VALIDACION 3. CONTRASEÑA 1 = CONTRASEÑA 2 */
+      password1Valor !== password2Valor
+    ) {
+      pPassword.innerHTML = "Revisa tu contraseña";
+      pPassword.style.display = "block";
 
-  if (nombreValor === ""){
-    // llamar alerta fallo
-  } else if(emailValor === "" || !/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(emailValor)){
-    // llamar alerta fallo
-  } else if(password1Valor === "" || password1Valor !== password2Valor || /^[a-zA-Z]\w{3,14}$/.test(password1Valor)){
-    // llamar alerta fallo
-  } else {
-    // llamar alerta de success
-    alertasDiv.innerHTML = "Correcto"
-  }
-}
+      setTimeout(() => {
+        pPassword.innerHTML = "";
+        pPassword.style.display = "none";
+      }, 3000);
+    } else if (
+      /* VALIDACION 4. EXPRESIÓN REGULAR DE CONTRASEÑA */
+      expPassword.test(password1Valor)
+    ) {
+    } else {
+      /* TODO CORRECTO */
+      alertasDiv.innerHTML = "Correcto";
+      alertasDiv.style.display = "block";
 
-if (nombreValor === "") {
-  setTimeout(() => {
-    //crear div y añadirlo al HTML
-    let alertDiv = document.createElement("div");
-    const textError = document.createTextNode("Error en el nombre");
-    alertDiv.appendChild(textError);
+      setTimeout(() => {
+        alertasDiv.innerHTML = "";
+        alertasDiv.style.display = "none";
+        window.location.href = "usuarios.html";
+      }, 3000);
+    }
 
-    //añadir a div esta class y sus attr
-    document.body.appendChild(alertDiv);
-    alertDiv.classList.add("alert");
-    alertDiv.classList.add("alert-danger");
-    alertDiv.setAttribute("role", "alert");
-  }, "3000");
-
-  localStorage.setItem("usuario", JSON.stringify(usuario));
-
-  setTimeout(() => {
-    //crear div y añadirlo al HTML
-    let alertDiv = document.createElement("div");
-    const textSuccess = document.createTextNode("Usuario creado correctamente");
-    //???????? PREGUNTAR A SOFIA diferencia entre createTextNode() e innerHTML(). Relación con appendChild()
-    alertDiv.appendChild(textSuccess);
-    document.body.appendChild(alertDiv);
-    console.log(alertDiv);
-
-    //añadir a div esta class y sus attr
-    //<div class="alert alert-success" role="alert">Usuario creado correctamente</div>
-    alertDiv.classList.add("alert");
-    alertDiv.classList.add("alert-success");
-    alertDiv.setAttribute("role", "alert");
-
-    //redirect('./usuarios.html')
-  }, "3000");
-
-  //mostrar en cards de Bootstrap los usuarios guardados en el LocalStorage
-  const usuarioRecogido = JSON.parse(localStorage.getItem("usuario"));
-  console.log(usuarioRecogido);
-};
-
-
-btn.addEventListener("click", enviarForm);
-
-
-/* const redirect = link => {
     setTimeout(() => {
-        window.location.href = link;
-    }, 1000);
-} */
+      pMal.innerHTML = "";
+      pMal.style.display = "none";
+    }, 3000);
+  }
+  validaciones();
+};
+btn.addEventListener("click", enviarForm);
