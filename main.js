@@ -5,8 +5,8 @@ const password2 = document.getElementById("password2");
 const btn = document.getElementById("btn");
 const alertasDiv = document.querySelector(".alertas");
 const pMal = document.getElementById("pMal");
-const pEmail = document.getElementById("emailMal");
-const pPassword = document.getElementById("passwordMal");
+/* const pEmail = document.getElementById("emailMal");
+const pPassword = document.getElementById("passwordMal"); */
 
 /* CREAR FUNCION QUE QUITE EL MENSAJE DE ALERTA */
 
