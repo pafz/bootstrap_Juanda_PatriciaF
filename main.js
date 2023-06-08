@@ -72,7 +72,7 @@ const enviarForm = (e) => {
       alertasDiv.style.display = "block";
 
       usuarios.push(usuario);
-      localStorage.setItem('users', JSON.stringify(usuarios));
+      localStorage.setItem('users', JSON.stringify(usuarios));  
       setTimeout(() => {
         alertasDiv.innerHTML = "";
         alertasDiv.style.display = "none";
