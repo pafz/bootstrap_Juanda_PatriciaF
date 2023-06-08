@@ -1,9 +1,11 @@
 # Bootstrap - Ejercicio form
 
+<a name="top"></a>
+
  <h3 align="center">EJERCICIO BOOTSTRAP</h3>
 
   <p align="center">
-    Ejercicio del bootcamp para realizar un formulario con el uso de bootstrap. Guardado y mostrando la info de localstore
+    Ejercicio inicio del bootcamp para realizar un formulario con el uso de bootstrap. Guardando y mostrando la info de localstore.
     <br />
     <a href="https://github.com/pafz/bootstrap_Juanda_PatriciaF"><strong>Uso de JS, HTML y Bootstrap</strong></a>
     <br />
@@ -38,77 +40,49 @@
 
 ## Objectivos
 
-El objetivo principal de este proyecto es aprender a través de la investigación a cerca de Bootstrap. A través de una serie de preguntas y la aplicacion...
-The main objective of this project has been to replicate the given design of a web page trying to connect it with a given API data.
-This project has been carried out from scratch for a period of 2 días.
-In this project users can:
+El objetivo principal de este proyecto es aprender Bootstrap a través de la investigación trabajando por parejas. A través de una serie de preguntas documentadas y la puesta a práctica en el formulario aplicando estilos de Bootstrap y 'alert' del mismo. Este proyecto tiene límite de ejecución de 2 días.
+Es este proyecto un usuario puede:
 <objectives>
 
   <ol>
-    <li>Scroll down the web</li>
-    <li>Add to cart</a></li>
-    <li>Select category</a></li>
+    <li>Scrollear la web</li>
+    <li>Registrarse como usuario</a></li>
+    <li>Ver los usuarios registrados</a></li>
 </ol>
 </objectives>
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## Sobre el proyecto
 
-In this project, a web page is developed where users can scroll down the page and look for priced pictures that they can later add to a wishlist, and select the picture category. An external public API has been used to created this same project <a href="https://drive.google.com/file/d/1lHnunPH2AyrA77--7_pyrrDmawkdALk_/view"></a>,
+En este proyecto se desarrolla una página web que consta de 2 páginas, en la que cualquier usuario se puede registrar y visualizar en cards los otros usuarios ya registrados. También puede scrollear cuando haya demasiados usuarios.
 
 ### Views
 
 <views>
- 
   <ol>
     <li>Home</a></li>
-    <li>Add to cart</a></li>
-    <li>People also buy</a></li>
+    <li>Usuarios</a></li>
   </ol>
 </views>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-### Built With
-
-- [![Node][Node.JS]][Node.JS-url]
-- [![React][React]][React-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="README.md#top">volver al principio </a>)</p>
 
 <!-- FUTURE -->
 
 ## Future Roadmap
 
-- [ ] Keep perfectioning the page
+- [ ] Keep perfectioning the page adding DB
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/YourName`)
-3. Commit your Changes (`git commit -m 'Add some YourName'`)
-4. Push to the Branch (`git push origin feature/YourName`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="README.md#top">volver al principio </a>)</p>
 
 <!-- LICENSE -->
 
 ## License
 
-This project is under license of Miguel Herrera.
+Este proyecto ha sido realizado como trabajo de aprendizaje por Juanda Mayón y Patricia Fernández.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="README.md#top">volver al principio </a>)</p>
 
 <!-- PREVIEW -->
 
@@ -122,18 +96,23 @@ This project is under license of Miguel Herrera.
 
 ## Contact
 
-  <p align="center">
-Miguel Herrera
+  <p align="justify">
+Juanda Mayón
 
-<a href = "mailto:mirkouda@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-<a href="https://www.linkedin.com/in/mherrevi/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+<a href = "mailto:juandamt00@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/juandamt" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
 
 </p>
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+  <p align="justify">
+Patricia Fernández
+
+<a href = "mailto:paferza@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+<a href="https://www.linkedin.com/in/patricia-fernandez-zamanillo/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+
+</p>
+<p align="right">(<a href="README.md#top">volver al principio </a>)</p>
 
 ---
-
-Developed by [Miguel Herrera](https://github.com/miguelherreravillanueva)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
