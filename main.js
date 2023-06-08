@@ -18,6 +18,11 @@ CORREGIR LAS EXPRESIONES REGULARES
 DEJAR SOLO UN P DONDE ESTÉN LAS ALERTAS
 */
 
+let usuarios = JSON.parse(localStorage.getItem('users'));
+if(usuarios === null) {
+  usuarios = [];
+}
+
 const enviarForm = (e) => {
   e.preventDefault();
   const nombreValor = nombre.value;
@@ -42,8 +47,8 @@ const enviarForm = (e) => {
     ) {
       pMal.innerHTML = "Rellena todos los campos";
       pMal.style.display = "block";
-      /* VALIDACION 2. EL EMAIL DEBE DE CUMPLIR LA EXPRESIÓN REGULAR */ /!----NO ESTÁ FUNCIONANDO------/;
-    } else if (expEmail.test(emailValor)) {
+      /* VALIDACION 2. EL EMAIL DEBE DE CUMPLIR LA EXPRESIÓN REGULAR */ 
+    } else if (!expEmail.test(emailValor)) {
       pMal.innerHTML = "Tienes mal el email";
       pMal.style.display = "block";
     } else if (
@@ -66,6 +71,8 @@ const enviarForm = (e) => {
       alertasDiv.innerHTML = "Correcto";
       alertasDiv.style.display = "block";
 
+      usuarios.push(usuario);
+      localStorage.setItem('users', JSON.stringify(usuarios));
       setTimeout(() => {
         alertasDiv.innerHTML = "";
         alertasDiv.style.display = "none";
