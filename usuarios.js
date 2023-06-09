@@ -4,7 +4,7 @@ if(usuarios === null) {
 }
 
 
-usuariosList = document.querySelector('.lista-usuarios');
+const usuariosList = document.querySelector('.lista-usuarios');
 
 usuarios.forEach(usuario => {
     const card = document.createElement('div');

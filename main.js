@@ -55,17 +55,16 @@ const enviarForm = (e) => {
       /* VALIDACION 3. CONTRASEÑA 1 = CONTRASEÑA 2 */
       password1Valor !== password2Valor
     ) {
-      pPassword.innerHTML = "Revisa tu contraseña";
-      pPassword.style.display = "block";
-
-      setTimeout(() => {
-        pPassword.innerHTML = "";
-        pPassword.style.display = "none";
-      }, 3000);
+      pMal.innerHTML = "Las contraseñas deben ser iguales";
+      pMal.style.display = "block";
     } else if (
       /* VALIDACION 4. EXPRESIÓN REGULAR DE CONTRASEÑA */
-      expPassword.test(password1Valor)
-    ) {
+      !expPassword.test(password1Valor)
+    ) 
+    {
+      pMal.innerHTML = "Contraseña incorrecta";
+      pMal.style.display = "block";
+
     } else {
       /* TODO CORRECTO */
       alertasDiv.innerHTML = "Correcto";
