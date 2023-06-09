@@ -80,7 +80,7 @@ En este proyecto se desarrolla una página web que consta de 2 páginas, en la q
 
 ## License
 
-Este proyecto ha sido realizado como trabajo de aprendizaje por Juanda Mayón y Patricia Fernández.
+Este proyecto ha sido realizado como trabajo de aprendizaje por Juanda Mayorga y Patricia Fernández.
 
 <p align="right">(<a href="README.md#top">volver al principio </a>)</p>
 
@@ -97,7 +97,7 @@ Este proyecto ha sido realizado como trabajo de aprendizaje por Juanda Mayón y 
 ## Contact
 
   <p align="justify">
-Juanda Mayón
+Juanda Mayorga
 
 <a href = "mailto:juandamt00@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/juandamt" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
